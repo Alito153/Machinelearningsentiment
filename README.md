@@ -255,7 +255,15 @@ $$p_{\text{up}} = P(Y^{(2)} = 1|X, \hat{V}_{\text{LSTM}})$$
 
 9. **Position sizing adaptatif :**
 
-$$\text{Lots} = \frac{\text{Kelly}^{1/4} \times \text{Capital}}{\text{SL}_{\text{final}} \times \text{pip\_value} \times \sqrt{1 + 2\hat{V}_{\text{LSTM}}}}$$
+$$
+\text{Lots} = 
+\frac{
+\text{Kelly}^{1/4} \times \text{Capital}
+}{
+\text{SL}_{\text{final}} \times \text{pip\_value} \times \sqrt{1 + 2\hat{V}_{\text{LSTM}}}
+}
+$$
+
 
 10. **Exécution :** Ouvrir position avec :
     - Entry : Prix de marché à $t_0 + 2$ ticks
