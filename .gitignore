@@ -1,27 +1,46 @@
-# ===== IGNORER LES GROS FICHIERS =====
+# ===========================================
+# IGNORER LES GROS DOSSIERS BRUTS (SAUF CSV)
+# ===========================================
 
-# Datasets bruts
-data/raw/
+# Datasets bruts — ignorer tout sauf .csv
+data/raw/*
+!data/raw/*.csv
+!data/raw/**/*.csv
 
-# Datasets préparés
-data/processed/
+# Datasets préparés — ignorer tout sauf .csv
+data/processed/*
+!data/processed/*.csv
+!data/processed/**/*.csv
 
-# Résultats du backtest
-backtesting/results/
+# ===========================================
+# BACKTESTING — ignorer tous les fichiers lourds
+# ===========================================
 
-# Visualisations volumineuses
+backtesting/results/*
+!backtesting/results/*.csv
+!backtesting/results/**/*.csv
+
+# ===========================================
+# ANALYSIS — ignorer les visualisations
+# ===========================================
+
 analysis/visualizations/
 
-# Modèles ML (.pkl)
-models/
+# ===========================================
+# MODELS — ignorer les modèles ML
+# ===========================================
 
-# Checkpoints, logs, artefacts
+models/
 *.pkl
 *.h5
 *.pt
-*.zip
+*.joblib
+*.sav
 
-# ===== IGNORER LES ENVIRONNEMENTS LOCAUX =====
+# ===========================================
+# FICHIERS TEMPORAIRES / ENVIRONNEMENTS
+# ===========================================
+
 *.pyc
 __pycache__/
 .ipynb_checkpoints/
